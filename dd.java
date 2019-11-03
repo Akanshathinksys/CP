@@ -58,7 +58,8 @@
 		
 		//.click();
 		
-		driver.findElement(By.id("handleField")).sendKeys("testakkuone");
+	       String Randmname = RandomStringUtils.randomAlphabetic(4); 
+		driver.findElement(By.id("handleField")).sendKeys("test"+ Randmname +"akku");
 		
 		List<WebElement> element =  driver.findElements(By.xpath("//button [@class = 'ui-submit button button-primary btnRegister']"));
 		
