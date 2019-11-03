@@ -30,7 +30,13 @@
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		driver.findElement(By.id("emailField")).sendKeys("tecfstakku@dffd.com");
+			Random randomGenerator = new Random();  
+		int randomInt = randomGenerator.nextInt(1000); 
+		
+		driver.findElement(By.id("emailField")).sendKeys("testakku"+ randomInt +"@gmail.com");
+		
+			
+			
 		driver.findElement(By.id("passwordField")).sendKeys("autotest");
 		
 		Select Monthdrpdn = new Select (driver.findElement(By.name("birthMonth")));
